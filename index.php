@@ -16,7 +16,7 @@ function getIp() {
 
 
 	}
-xhttp.open(“GET”, “http://ip.jsontest.com/”, true);
+xhttp.open('GET', 'http://ip.jsontest.com/', true);
 xhttp.send();
 
 }
