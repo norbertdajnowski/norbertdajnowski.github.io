@@ -7,11 +7,9 @@ function getIp() {
 	var xhttp = new XMLHttpRequest();
 	xhttp.onreadystatechange = function() {
 
+
 	}
 }
-
-	xhttp.open('GET', 'http://ip.jsontest.com/', true);
-	xhttp.send();
 
 
 </script>
