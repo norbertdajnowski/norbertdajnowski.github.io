@@ -11,13 +11,12 @@ function getIp() {
 		if(this.readyState == 4 && this.status == 200) {
 
 			var output = JSON.parse(this.responseText);
-			document.getElementById(“ip”).innerHTML = output.ip;
+			document.getElementById('ip').innerHTML = output.ip;
 
-		}
-
+    }
 
 	}
-xhttp.open('GET', 'http://ip.jsontest.com/', true);
+xhttp.open('GET', 'http://ip.jsontest.com/');
 xhttp.send();
 
 }
