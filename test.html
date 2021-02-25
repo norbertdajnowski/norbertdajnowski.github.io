@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Client</title>
+</head>
+<body>
+
+<button onclick="getIp()">Click to get your IP</button>
+    <p id="abcd">My ip:</p>
+
+	<script>
+
+	function getIp() {
+		
+            var xhttp = new XMLHttpRequest();
+            xhttp.onreadystatechange = function() {
+
+				if(this.readyState == 4 && this.status == 200) {
+
+                var request = JSON.parse(xhttp.responseText);
+                var ipString = "My ip: " + request.ip;
+                document.getElementById("abcd").innerHTML = ipString;
+
+		    }
+
+			};
+            xhttp.open("GET", "http://ip.jsontest.com/", true);
+            xhttp.send();
+
+		}
+
+	</script>
+</body>
+</html>
+
